@@ -3,7 +3,7 @@ export default function(logging = true) {
     const func = descriptor.value;
     descriptor.value = function (...args) {
       if (logging === false) {
-        return func.bind(this)(this.props);
+        return func.bind(this)(...args);
       }
       const log = console.log;
       log("class: %c" + this.constructor.name, 'color: magenta;');
@@ -25,7 +25,7 @@ export default function(logging = true) {
           log("    prevState:" + JSON.stringify(stateArg));
           break;
       }
-      return func.bind(this)(this.props);
+      return func.bind(this)(...args);
     };
     return descriptor;
   }
