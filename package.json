@@ -1,6 +1,6 @@
 {
   "name": "react-log-decorator",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "React logger for props and state with Decorators",
   "main": "react-logger.js",
   "scripts": {
